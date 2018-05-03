@@ -1,0 +1,98 @@
+.login-head{
+	height:.8rem;
+	background-color: #f9f9f9;
+	font-size:.32rem;
+	color:#616161;
+	border-bottom: 1px solid #bbb;
+	text-align: center;
+	line-height: .8rem;
+}
+.login-style{
+	height: 3rem;
+	font-size:0.28rem;
+}
+.login-style-head{
+	border-bottom: 1px solid #d7d7d7;
+}
+
+.user-name-login,.sms-login{
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	line-height: 1rem;
+}
+.choose-login-style{
+	border-bottom: 2px solid #f23030;
+	padding:0.3rem;
+}
+.username-login-content,.sms-login-content{
+	padding:0 0.2rem;
+	height:2rem;
+}
+.userName,.userPassWord,.set-verification-code,.get-verification-code{
+	border-bottom:1px solid #d7d7d7;
+	height:1rem;
+	line-height: 1rem;
+	padding-left:0.15rem; 
+}
+.clear-both{
+	clear: both;
+}
+.set-verification-code-btn{
+	text-align: center;
+	float: right;
+	width:1.6rem;
+	border-left:1px solid #d7d7d7;
+	color:#848689;
+	height: 0.4rem;
+	margin-top: 0.3rem;
+    line-height: 0.4rem;
+    border-left: 1px solid #d7d7d7;
+    padding: 0 0.3rem;
+}
+.login-btn{
+	margin-top: 0.4rem;
+	padding: 0 0.2rem;
+	font-size: 0.28rem;
+}
+.ordinary-login{
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 5px;
+	color:#848689;
+}
+.one-key-login{
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	border:1px solid #f23030;
+	border-radius: 5px;
+	margin-top:0.2rem; 
+}
+.forget-regist{
+	font-size: 0.26rem;
+	margin-top: 0.4rem;
+	padding-left: 0.4rem; 
+	padding-right: 0.2rem;
+}
+.regist{
+	float: right;
+}
+.else-login-style{
+	margin: 0 0.2rem;
+	margin-top: 0.8rem;
+	font-size: 0.28rem;
+	text-align: center;
+	border-top: 2px solid #eee;
+}
+.else-login-title{
+	position: relative;
+    top: -0.25rem;
+    padding: 0 0.2rem;
+    background-color: #fff;
+    font-size: 0.3rem;
+    color:#848689;
+}

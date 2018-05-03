@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/>
+        <title>
+            登陆注册
+        </title>
+        <link href="css/common.css" rel="stylesheet" type="text/css">
+            <link href="css/index.css" rel="stylesheet" type="text/css">
+            </link>
+        </link>
+    </head>
+    <body>
+        <div id="login">
+            <div class="login-head">
+                蜀桑源登录
+            </div>
+            <div class="login-style">
+                <div class="login-style-head">
+                    <div class="user-name-login">
+                        <span :class="[loginStyle.userName=='true'?'choose-login-style':'']" @click='changeStyle("userName")'>
+                            账号密码登录
+                        </span>
+                    </div>
+                    <div class="sms-login">
+                        <span :class="[loginStyle.sms=='true'?'choose-login-style':'']" @click='changeStyle("sms")'>
+                            短信验证码登录
+                        </span>
+                    </div>
+                    <div class="clear-both">
+                    </div>
+                </div>
+                <div class="username-login-content" v-show="loginStyle.userName=='true'">
+                    <div class="userName">
+                        <span style="margin-right: 0.15rem">
+                            账号
+                        </span>
+                        <input name="" placeholder="用户姓名/手机/已验证邮箱" ref="userName" type="">
+                        </input>
+                    </div>
+                    <div class="userPassWord">
+                        <span style="margin-right: 0.15rem">
+                            密码
+                        </span>
+                        <input name="" placeholder="请输入密码" ref="userPassWord" type="">
+                        </input>
+                    </div>
+                </div>
+                <div class="sms-login-content" v-show="loginStyle.sms=='true'">
+                    <div class="set-verification-code">
+                        <select v-on:change="getPrefix($event)">
+                            <!-- <option value="a">+86</option>
+  						<option value="b">+853</option>
+					 	<option value="c">+886</option>
+					  	<option value="d">+82</option> -->
+                            <option :value="item.name" v-for="item in phonePrefix">
+                                {{item.value}}
+                            </option>
+                        </select>
+                        <input name="" placeholder="请输入手机号" ref="phoneNum" type="number">
+                            <span @click="getPhoneCode" class="set-verification-code-btn">
+                                {{msg}}
+                            </span>
+                        </input>
+                    </div>
+                    <div class="get-verification-code">
+                        <input name="" placeholder="请输入你收到的验证码" ref="phoneCode" type="">
+                        </input>
+                    </div>
+                </div>
+            </div>
+            <div class="login-btn">
+                <div @click="login" class="ordinary-login">
+                    登录
+                </div>
+                <div class="one-key-login">
+                    一键登录
+                </div>
+            </div>
+            <div class="forget-regist">
+                <span class="foget">
+                    忘记密码
+                </span>
+                <span @click="regist" class="regist">
+                    手机快速注册
+                </span>
+            </div>
+            <div class="else-login-style">
+                <span class="else-login-title">
+                    其他登录方式
+                </span>
+                <div style="margin-top: 0.8rem">
+                    登录代表你已同意
+                    <a href="https://in.m.jd.com/help/app/private_policy.html">
+                        蜀桑源隐私政策
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="js/zepto.min.js" type="text/javascript">
+        </script>
+        <script src="js/autoSize.js" type="text/javascript">
+        </script>
+        <script src="js/common.js" type="text/javascript">
+        </script>
+        <script src="js/vue.js" type="text/javascript">
+        </script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js">
+        </script>
+        <script src="js/index.js" type="text/javascript">
+        </script>
+    </body>
+</html>
